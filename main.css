@@ -4,14 +4,14 @@ body {
 }
 
 /* Add a black background color to the top navigation */
-nav {
+#nav {
   /* background-color: #333; */
   color: #333;
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
-nav a {
+#nav a {
   color: #333;
   float: right;
   text-align: center;
@@ -22,16 +22,30 @@ nav a {
 }
 
 /* Change the links on hover */
-nav a:hover {
+#nav a:hover {
   font-weight: bold;
 }
 
 /* Add name */
-nav a.active {
+#nav a.active {
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   float: left;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .aboutme {
