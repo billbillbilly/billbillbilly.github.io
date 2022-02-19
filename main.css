@@ -36,8 +36,8 @@ body {
 
 .sticky {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10px;
+  width: 97.4%;
 }
 
 .content {
@@ -45,15 +45,14 @@ body {
 }
 
 .sticky + .content {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 .aboutme {
-  margin-top: 10px;
+  margin-top: 1100px;
   content: "";
   clear: both;
   display: table;
-  margin: 30px;
   width: 100%;
 }
 
@@ -63,8 +62,14 @@ body {
   margin-left: 100px;
 }
 
+.aboutmetxt{
+  margin-top: 70px;
+  margin-right: 10px;
+}
+
 .work {
   display: grid;
+  margin-top: 800px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
