@@ -3,12 +3,6 @@ body {
     margin-top: 25px;
 }
 
-/* Add a black background color to the top navigation */
-nav {
-  /* background-color: #333; */
-  overflow: hidden;
-}
-
 /* Style the links inside the navigation bar */
 nav a {
   float: right;
