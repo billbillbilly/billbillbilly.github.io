@@ -5,13 +5,13 @@ body {
 
 /* Add a black background color to the top navigation */
 nav {
-  background-color: #333;
+  /* background-color: #333; */
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 nav a {
-  float: left;
+  float: right;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -26,10 +26,10 @@ nav a:hover {
 }
 
 /* Add a color to the active/current link */
-nav a.active {
+/* nav a.active {
   background-color: #04AA6D;
   color: white;
-}
+} */
 
 header {
   display: flex;
