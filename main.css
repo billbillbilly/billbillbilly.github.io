@@ -34,6 +34,10 @@ body {
   float: left;
 }
 
+.select {
+  font-weight: bold;
+}
+
 .sticky {
   position: fixed;
   top: 10px;
@@ -58,13 +62,14 @@ body {
 
 .profile-img{
   float: left;
-  margin-right: 150px;
+  margin-right: 300px;
   margin-left: 100px;
 }
 
 .aboutmetxt{
   margin-top: 70px;
-  margin-right: 10px;
+  margin-right: 50px;
+  margin-left: 100px;
 }
 
 .work {
