@@ -3,6 +3,10 @@ body {
     margin-top: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Add a black background color to the top navigation */
 #nav {
   /* background-color: #333; */
@@ -19,6 +23,7 @@ body {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
+  transition: all ease-out 250ms;
 }
 
 /* Change the links on hover */
@@ -41,7 +46,7 @@ body {
 .sticky {
   position: fixed;
   top: 10px;
-  width: 97.4%;
+  width: 98.34%;
 }
 
 .content {
@@ -52,11 +57,20 @@ body {
   padding-top: 100px;
 }
 
+section {
+  margin-top:500px;
+  padding:1rem 1rem;
+}
+
+section:nth-of-type(2n) {
+  margin-top:200px;
+}
+
 .aboutme {
-  margin-top: 1100px;
+  margin-top: 300px;
+  display: table;
   content: "";
   clear: both;
-  display: table;
   width: 100%;
 }
 
@@ -74,7 +88,7 @@ body {
 
 .work {
   display: grid;
-  margin-top: 800px;
+  margin-top: 300px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
