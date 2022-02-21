@@ -36,7 +36,7 @@
       <div class="grid_work">
         <div class="grid_item">
           <div class="one">
-            <img href="box1" onclick="pop(this)" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
+            <img id="project1" href="box1" onclick="pop(this)" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
           </div>
         </div>
         <div class="grid_item">
@@ -78,11 +78,36 @@
     </section>
 
     <div id="box1">
+      <div class="slideshow-container">
+        <div class="slides">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" style="width:100%">
+        </div>
+        <div class="slides">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" style="width:100%">
+        </div>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- <h1>Good Job</h1> -->
+      <div class="closeButton">
+        <a class="close" onclick="pop()" style="font-family: Arial; font-size:10px;">X</a>
+      </div>
+    </div>
+
+    <!-- <div id="box2">
       <i class="fas fa-check-circle"></i>
       <h1>Good Job</h1>
       <a class="close" onclick="pop()">Close Box</a>
-    </div>
+    </div> -->
     <script src="popup.js"></script>
+    <script type="slideshow.js"></script>
 
     <!-- Publication -->
     <section id="Publication">
