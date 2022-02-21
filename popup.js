@@ -13,5 +13,5 @@ function pop(item) {
     document.getElementById("box1").style.display = "none";
     modal = null;
   }
-  console(item.getAttribute("href"));
+  console.log(item.getAttribute("href"));
 }
