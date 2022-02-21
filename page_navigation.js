@@ -13,15 +13,6 @@ function navHighlighter() {
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
 
-    // Original:
-    // const sectionTop = current.offsetTop - 50;
-    //
-    // Alex Turnwall's update:
-    // Updated original line (above) to use getBoundingClientRect instead of offsetTop, based on:
-    // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
-    // https://newbedev.com/difference-between-getboundingclientrect-top-and-offsettop
-    // This allows the use of sections inside a relative parent, which I'm not using here, but needed for a project
-    //
     const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
     sectionId = current.getAttribute("id");
 

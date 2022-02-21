@@ -36,17 +36,17 @@
       <div class="grid_work">
         <div class="grid_item">
           <div class="one">
-            <img href="#popup1" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
+            <img href="box1" onclick="pop(this)" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
           </div>
         </div>
         <div class="grid_item">
           <div class="two">
-            <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
+            <img id="box2" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
           </div>
         </div>
         <div class="grid_item">
           <div class="three">
-            <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
+            <img id="box3" src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" class="img_button">
           </div>
         </div>
         <div class="grid_item">
@@ -77,6 +77,12 @@
       </div>
     </section>
 
+    <div id="box1">
+      <i class="fas fa-check-circle"></i>
+      <h1>Good Job</h1>
+      <a class="close" onclick="pop()">Close Box</a>
+    </div>
+    <script src="popup.js"></script>
 
     <!-- Publication -->
     <section id="Publication">
