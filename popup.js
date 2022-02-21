@@ -1,17 +1,15 @@
 
 var modal = null;
 
-function getId(item) {
-  return item.getAttribute("href");
-}
-
 function pop(item) {
   if(modal === null) {
-    document.getElementById("box1").style.display = "block";
+    var thisId = item.getAttribute("href");
+    document.getElementById(thisId).style.display = "block";
     modal = true;
   } else {
-    document.getElementById("box1").style.display = "none";
+    var thisId = item.getAttribute("href");
+    alert(thisId);
+    document.getElementById(thisId).style.display = "none";
     modal = null;
   }
-  console.log(item.getAttribute("href"));
 }
