@@ -126,6 +126,8 @@ section:nth-of-type(4n) {
 }
 
 .profile-img{
+  position: relative;
+  top:-50px;
   float: left;
   margin-right: 300px;
   margin-left: 100px;
