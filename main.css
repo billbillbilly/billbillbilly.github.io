@@ -12,6 +12,7 @@ html {
   /* background-color: #333; */
   color: #333;
   overflow: hidden;
+  z-index: 9999;
 }
 
 /* Style the links inside the navigation bar */
@@ -71,13 +72,19 @@ html {
 
 #sub-two {
   position: relative;
-  top: -330px;
+  top: 150px;
   left: 70px;
 }
 
 #sub-three {
   position: relative;
-  top: -530px;
+  top: 150px;
+  left: 70px;
+}
+
+#sub-four {
+  position: relative;
+  top: -230px;
   left: 70px;
 }
 
@@ -95,11 +102,15 @@ section:nth-of-type(2n) {
 }
 
 section:nth-of-type(3n) {
-  margin-top:670px;
+  position: relative;
+  top: -150px;
+  margin-top:470px;
 }
 
 section:nth-of-type(4n) {
-  margin-top:800px;
+  position: relative;
+  top: -150px;
+  margin-top:270px;
 }
 
 .me_item {
@@ -296,9 +307,30 @@ section:nth-of-type(4n) {
 /* Publication */
 #pub_txt_box {
   position: relative;
-  top: -300px;
+  top: 150px;
   margin-left: 70px;
   margin-right: 70px;
+}
+
+.resume_grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 2rem 2rem;
+  margin-top: 150px;
+  margin-left: 70px;
+  margin-right: 70px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.education_time {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.education_content {
+  grid-column: 2 / 2;
+  grid-row: 1;
 }
 
 footer {
