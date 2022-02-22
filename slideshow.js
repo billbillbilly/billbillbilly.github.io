@@ -1,9 +1,12 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+// showSlides(slideIndex);
+
+if (slideIndex == 1) {
+  showSlides(slideIndex);
+}
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-  alert(slideIndex);
 }
 
 function showSlides(n) {
@@ -11,7 +14,7 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("slide");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  // if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }

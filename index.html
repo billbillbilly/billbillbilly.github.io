@@ -78,27 +78,29 @@
     </section>
 
     <div id="box1">
-      <div class="slideshow-container">
-        <div class="slide">
-          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg">
-        </div>
-      </div>
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-
-      <!-- <h1>Good Job</h1> -->
+      <!-- Close button -->
       <div class="closeButton">
         <a class="close" onclick="pop()" style="font-family: Arial; font-size:10px;">X</a>
       </div>
+      <!-- Slides -->
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" alt="project">
+        </div>
+        <div class="slide">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" alt="project">
+        </div>
+        <div class="slide">
+          <img src="https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/llama.jpg" alt="project">
+        </div>
+      </div>
+      <div>
+        <a class="dot" onclick="currentSlide(1)"></a>
+        <a class="dot" onclick="currentSlide(2)"></a>
+        <a class="dot" onclick="currentSlide(3)"></a>
+      </div>
+
+      <!-- <h1>Good Job</h1> -->
     </div>
 
     <!-- <div id="box2">
@@ -106,8 +108,9 @@
       <h1>Good Job</h1>
       <a class="close" onclick="pop()">Close Box</a>
     </div> -->
+    <script src="slideshow.js"></script>
     <script src="popup.js"></script>
-    <script type="slideshow.js"></script>
+
 
     <!-- Publication -->
     <section id="Publication">
