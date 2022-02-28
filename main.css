@@ -230,7 +230,7 @@ section:nth-of-type(4n) {
 /* project popup box */
 #box1 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -255,7 +255,7 @@ section:nth-of-type(4n) {
 
 #box2 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -280,7 +280,7 @@ section:nth-of-type(4n) {
 
 #box3 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -305,7 +305,7 @@ section:nth-of-type(4n) {
 
 #box4 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -330,7 +330,7 @@ section:nth-of-type(4n) {
 
 #box5 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -355,7 +355,7 @@ section:nth-of-type(4n) {
 
 #box6 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -380,7 +380,7 @@ section:nth-of-type(4n) {
 
 #box7 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -405,7 +405,7 @@ section:nth-of-type(4n) {
 
 #box8 {
   width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: rgba(35, 35, 35, 0.99);
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -494,6 +494,22 @@ section:nth-of-type(4n) {
 
 .act, .dot:hover {
   background-color: #717171;
+}
+
+.tag {
+  font-family: Avenir;
+  font-size: 15px;
+  font-weight:lighter;
+  color: white;
+}
+
+.pop_txt {
+  font-family: Avenir;
+  font-size: 15px;
+  font-weight:lighter;
+  color: white;
+  margin: 5%;
+  text-align: left;
 }
 
 /* Publication */
