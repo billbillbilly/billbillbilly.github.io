@@ -143,17 +143,28 @@ section:nth-of-type(4n) {
 
 .grid_work {
   box-sizing: border-box;
-  display: grid;
-  grid-gap: 2rem 2rem;
+  /* display: grid; */
   margin-top: 150px;
   margin-left: 70px;
   margin-right: 70px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr); */
+  line-height: 0;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 4;
+  -moz-column-gap: 0px;
+  column-count: 4;
+  column-gap: 0px;
 }
 
 .grid_item {
   position: relative;
+  padding: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .one {
@@ -164,7 +175,6 @@ section:nth-of-type(4n) {
 .two {
   grid-column: 2 / 4;
   grid-row: 1;
-  position: relative;
 }
 
 .three {
@@ -185,7 +195,6 @@ section:nth-of-type(4n) {
 .two2 {
   grid-column: 2 / 4;
   grid-row: 2;
-  position: relative;
 }
 
 .three2 {
@@ -203,6 +212,7 @@ section:nth-of-type(4n) {
   opacity: 1;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  object-fit: cover;
 }
 
 .img_button:hover {
@@ -215,6 +225,7 @@ section:nth-of-type(4n) {
   left: 5%;
   z-index: 1;
   display: none;
+  white-space: pre-wrap;
 }
 
 /* project popup box */
