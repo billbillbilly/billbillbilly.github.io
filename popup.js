@@ -2,6 +2,7 @@
 var modal = null;
 var thisId = null;
 var this_id = null;
+var image_id = null;
 
 function pop(item) {
   if(modal === null) {
@@ -16,12 +17,16 @@ function pop(item) {
 
 function show_projName(item) {
   this_id = item.getAttribute("id");
+  image_id = this_id;
   this_id = this_id + "t";
+  document.getElementById(image_id).style.opacity = "0.4";
   document.getElementById(this_id).style.display = "block";
 }
 
 function hide_projName(item) {
   this_id = item.getAttribute("id");
+  image_id = this_id;
   this_id = this_id + "t";
+  document.getElementById(image_id).style.opacity = "1";
   document.getElementById(this_id).style.display = "none";
 }
