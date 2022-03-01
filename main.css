@@ -153,6 +153,20 @@ section:nth-of-type(4n) {
   margin-left: 100px;
 }
 
+.fa {
+  padding: 50px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 50px;
+  border-radius: 50%;
+  color: black;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
 .grid_work {
   box-sizing: border-box;
   /* display: grid; */
@@ -495,7 +509,6 @@ section:nth-of-type(4n) {
   display: inline-block;
 }
 
-
 .slide_frame::-webkit-scrollbar {
   width: 1px;
 }
@@ -505,7 +518,7 @@ section:nth-of-type(4n) {
 }
 
 .slide_frame::-webkit-scrollbar-thumb {
-  background: #888;
+  background: white;
 }
 
 .slide {
