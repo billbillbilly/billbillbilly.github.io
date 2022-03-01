@@ -49,3 +49,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " act";
 }
+
+function unloadVideos() {
+  var iframes = document.getElementsByClassName('videos');
+  for (var i = 0; i < iframes.length; i++) {
+    var player = $f(iframes[i]);
+    player.api("unload");
+  }
+}

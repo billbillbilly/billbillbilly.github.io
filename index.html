@@ -16,6 +16,7 @@
     </div>
     <script src="sticky_nav.js"></script>
     <script src="page_navigation.js"></script>
+    <script src="https://unpkg.com/vimeo-froogaloop2@0.1.1/javascript/froogaloop.js"></script>
 
     <!-- About me -->
     <section id="About" style="position:relative; top: 250px;">
@@ -122,13 +123,13 @@
     <div id="box1">
       <!-- Close button -->
       <div class="closeButton">
-        <a class="close" onclick="pop()" style="font-family: Arial; font-size:10px;">X</a>
+        <a class="close" onclick="pop(); reloadVideos()" style="font-family: Arial; font-size:10px;">X</a>
       </div>
       <!-- Slides -->
       <div class="slideshow-container">
         <div class="slide_frame">
           <div class="slide">
-            <img src="projects/proj1/s1.jpg" alt="project">
+            <iframe class="videos" src="https://player.vimeo.com/video/682983406?h=c4d6fc01c3" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
           <div class="slide">
             <img src="projects/proj1/s2.jpg" alt="project">
@@ -139,13 +140,12 @@
         </div>
       </div>
       <div>
-        <a class="dot" onclick="currentSlide(1)"></a>
-        <a class="dot" onclick="currentSlide(2)"></a>
-        <a class="dot" onclick="currentSlide(3)"></a>
+        <a class="dot" onclick="currentSlide(1); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(2); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(3); unloadVideos()"></a>
       </div>
 
       <div style="position:relative; top:30px;">
-        <a class="tag" href="https://vimeo.com/682983406">[Vedio]</a>
         <a class="tag" href="https://www.w3schools.com">[Detail]</a>
       </div>
 
@@ -168,7 +168,7 @@
       <div class="slideshow-container">
         <div class="slide_frame">
           <div class="slide">
-            <img src="projects/proj2/s1.jpg" alt="project">
+            <iframe class="videos" src="https://player.vimeo.com/video/682977936?h=1bb5d57da8" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
           <div class="slide">
             <img src="projects/proj2/s2.jpg" alt="project">
@@ -179,13 +179,12 @@
         </div>
       </div>
       <div>
-        <a class="dot" onclick="currentSlide(4)"></a>
-        <a class="dot" onclick="currentSlide(5)"></a>
-        <a class="dot" onclick="currentSlide(6)"></a>
+        <a class="dot" onclick="currentSlide(4); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(5); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(6); unloadVideos()"></a>
       </div>
 
       <div style="position:relative; top:30px;">
-        <a class="tag" href="https://vimeo.com/682977936">[Vedio]</a>
         <a class="tag" href="https://www.w3schools.com">[Detail]</a>
       </div>
 
@@ -208,26 +207,24 @@
       <div class="slideshow-container">
         <div class="slide_frame">
           <div class="slide">
-            <img src="projects/proj3/s1.jpg" alt="project">
+            <iframe class="videos" src="https://player.vimeo.com/video/683474041?h=b8113730ec" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
           <div class="slide">
             <img src="projects/proj3/s2.jpeg" alt="project">
           </div>
           <div class="slide">
-            <img src="projects/proj3/s3.jpeg" alt="project">
+            <iframe class="videos" src="https://player.vimeo.com/video/683483775?h=1206cb78e2" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
         </div>
       </div>
       <div>
-        <a class="dot" onclick="currentSlide(7)"></a>
-        <a class="dot" onclick="currentSlide(8)"></a>
-        <a class="dot" onclick="currentSlide(9)"></a>
+        <a class="dot" onclick="currentSlide(7); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(8); unloadVideos()"></a>
+        <a class="dot" onclick="currentSlide(9); unloadVideos()"></a>
       </div>
 
       <div style="position:relative; top:30px;">
         <a class="tag" href="https://vr-proto.glitch.me/">[360/VR sketch]</a>
-        <a class="tag" href="https://vimeo.com/682977936">[Vedio-physical prototype]</a>
-        <a class="tag" href="https://vimeo.com/682977936">[Vedio-digital prototype]</a>
         <a class="tag" href="https://www.w3schools.com">[Detail]</a>
       </div>
 
