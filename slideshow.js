@@ -24,6 +24,8 @@ function getSlideID(item) {
     slideID = 18;
   }else if (slideID == "8") {
     slideID = 21;
+  }else if (slideID == "9") {
+    slideID = 24;
   }
   slideIndex = slideID+1;
   if (slideIndex == slideID+1) {
