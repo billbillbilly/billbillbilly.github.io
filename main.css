@@ -208,6 +208,7 @@ section:nth-of-type(4n) {
 }
 
 .img_button {
+  filter: grayscale(100%);
   z-index: 0;
   opacity: 1;
   cursor: pointer;
@@ -215,9 +216,9 @@ section:nth-of-type(4n) {
   object-fit: cover;
 }
 
-/* .img_button:hover {
-  opacity: 0.4;
-} */
+.img_button:hover {
+  filter:none;
+}
 
 .proj_type {
   position: absolute;
