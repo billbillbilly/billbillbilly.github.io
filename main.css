@@ -105,12 +105,15 @@ img {
 }
 
 section {
-  margin-top:500px;
-  padding:1rem 1rem;
+  position: relative;
+  top: -150px;
+  margin-top: 750px;
 }
 
 section:nth-of-type(2n) {
-  margin-top:200px;
+  position: relative;
+  top: -850px;
+  margin-top: 470px;
 }
 
 section:nth-of-type(3n) {
@@ -131,26 +134,21 @@ section:nth-of-type(4n) {
 
 .aboutme {
   margin-top: 300px;
-  display: table;
-  content: "";
-  clear: both;
   width: 100%;
 }
 
 .profile-img{
-  position: relative;
-  top:-300px;
   float: left;
-  margin-right: 300px;
-  margin-left: 100px;
+  margin-right: 50%;
+  margin-left: 10%;
   width: 35%;
   height: 35%;
 }
 
 .aboutmetxt{
-  margin-top: 70px;
-  margin-right: 50px;
-  margin-left: 100px;
+  margin-right: 10%;
+  margin-left: 60%;
+  display: inline-block;
 }
 
 .fa {
@@ -158,7 +156,7 @@ section:nth-of-type(4n) {
   width: 20px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 50px;
+  margin: 5px 20px;
   border-radius: 50%;
   color: black;
 }
