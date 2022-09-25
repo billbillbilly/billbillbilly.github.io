@@ -41,7 +41,7 @@ div {
 .blue {
   background-color: #ADD8E6;
   text-align: left;
-  margin-left: 50px;
+  margin-right: 50px;
   border-bottom: 3px;
   border-right: 10px;
 }
@@ -55,7 +55,7 @@ footer {
   background-image:
   linear-gradient(
     to right,
-    #000000 35%, 
+    #000000 35%,
     #0066ff 70%,
     #000000
     );
