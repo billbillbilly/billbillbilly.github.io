@@ -97,8 +97,9 @@ figcaption {
 }
 
 footer {
+  font-size: min(2vw, 15px);
   text-align: center;
-  padding: 30px;
+  padding: 2vh;
   background-color: white;
 }
 
