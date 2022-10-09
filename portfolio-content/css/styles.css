@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    margin: 10px;
+    margin: 2%;
 }
 
 header{
@@ -31,11 +31,11 @@ nav a {
 }
 
 nav a:hover {
-  font-size: 105%;
   font-weight: bold;
 }
 
 nav a.active {
+  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -46,25 +46,49 @@ main {
 h1 {
   font-size: 400%;
   color: white;
-  padding-top: 5%;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-p {
-  color: white;
-}
-
-img {
-  padding-top: 5%;
+  padding-top: 3%;
   padding-bottom: 3%;
 }
 
+p {
+  font-family: serif, sans-serif, Helvetica;
+  color: white;
+  line-height: 20px;
+}
+
+img {
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+
+#parent {
+  position: relative;
+}
+
+#static {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
+#static:hover {
+  opacity: 0;
+}
+
+/* images desplay style */
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+figcaption {
+  font-family: serif, sans-serif, Helvetica;
+  font-size: 80%;
+  color: white;
 }
 
 footer {
