@@ -8,21 +8,21 @@ body {
 
 header{
   margin: auto;
-  position: fixed;
-  background-color: black;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 
-nav li{
-  /* float: left; */
-  overflow: hidden;
-  display: inline-block;
-  /* padding-right: 1%; */
+nav {
+  position: fixed;
+  background-color: black;
   z-index: 9999;
 }
 
-nav a {
+ul li {
+  overflow: hidden;
+  display: inline-block;
+}
+
+ul a {
   color: white;
   font-family: serif, sans-serif, Helvetica;
   font-size: min(2vw, 15px);
@@ -60,6 +60,7 @@ p {
 img {
   padding-top: 3%;
   padding-bottom: 1%;
+  border: 1px solid #555;
 }
 
 #parent {
@@ -78,7 +79,7 @@ img {
   opacity: 0;
 }
 
-/* images desplay style */
+/* images/texts/desplay style */
 .center {
   display: block;
   margin-left: auto;
@@ -111,6 +112,15 @@ footer {
 
 .gallery figure {
     object-fit: cover;
+    position: relative;
+}
+
+.gallery img:hover {
+  width: min(40vw, 450px);
+  position: absolute;
+  z-index: 99;
+  top: -20%;
+  left: -20%;
 }
 
 .gallerycol {
@@ -122,4 +132,9 @@ footer {
 
 .gallerycol figure {
     object-fit: cover;
+}
+
+video {
+  padding-bottom: min(1.5vw,10px);
+  border: 1px solid #555;
 }
