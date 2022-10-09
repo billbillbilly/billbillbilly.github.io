@@ -1,0 +1,38 @@
+body {
+    margin: 10px;
+}
+
+header{
+
+}
+
+nav {
+  /* background-color: #333; */
+  color: #333;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  float: left;
+}
+
+main {
+
+}
+
+h1 {
+
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
