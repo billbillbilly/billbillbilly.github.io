@@ -84,7 +84,7 @@ footer{
 nav{
   background-color: #ddd;
   padding: 20px 0;
-  text-align: right;
+  text-align: center;
   /*Your code here*/
   display: flex;
   align-items: flex-start;
@@ -105,7 +105,7 @@ header{
   background-color: #DDDDDD;
   min-height: 400px;
   /* Span one row */
-  grid-row: 2/span 1;
+  grid-row: 2;
 }
 
 header p{
