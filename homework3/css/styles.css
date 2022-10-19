@@ -34,7 +34,7 @@ nav a{
 }
 
 nav a:hover{
-  /* text-decoration: underline; */
+  text-decoration: underline;
   text-decoration-style:wavy;
 }
 
@@ -86,10 +86,11 @@ nav{
   padding: 20px 0;
   text-align: center;
   /*Your code here*/
-  display: flex;
+  position: relative;
   align-items: flex-start;
   /*Span the top row*/
   grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 header{
@@ -101,9 +102,11 @@ header{
   height: 400px;                /* Parallax effect */
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
-  background-image: url("images/header.jpg");
+  background-image: url("https://raw.githubusercontent.com/billbillbilly/billbillbilly.github.io/main/homework3/images/header.jpg");
   background-color: #DDDDDD;
   min-height: 400px;
+  grid-column: 1 / -1;
+  width: 100%;
   /* Span one row */
   grid-row: 2;
 }
@@ -196,6 +199,8 @@ header p{
     text-align: right;
     padding: 35px 0px;
     align-self: center;
+    position: relative;
+    align-items: flex-start;
   }
 
    .about, .clients, .method-image, .contact-image {
