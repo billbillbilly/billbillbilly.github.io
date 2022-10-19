@@ -100,7 +100,7 @@ header{
   height: 400px;                /* Parallax effect */
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
-  background-image: url("/Users/yangxiaohao/Downloads/HW3/images/header.jpg");
+  background-image: url("images/header.jpg");
   background-color: #DDDDDD;
   min-height: 400px;
   /* Span one row */
@@ -170,6 +170,10 @@ header p{
   margin: auto;
   /*Your code here:*/
   /*Align the content in the center */
+  /* display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; */
   text-align: center;
   overflow: scroll;
   max-height: 25%;
