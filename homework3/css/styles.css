@@ -86,7 +86,7 @@ nav{
   padding: 20px 0;
   text-align: center;
   /*Your code here*/
-  position: relative;
+  position: absolute;
   align-items: flex-start;
   /*Span the top row*/
   grid-row: 1;
