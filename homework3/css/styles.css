@@ -89,6 +89,7 @@ nav{
   display: flex;
   align-items: flex-start;
   /*Span the top row*/
+  grid-row: 1;
 }
 
 header{
@@ -104,7 +105,7 @@ header{
   background-color: #DDDDDD;
   min-height: 400px;
   /* Span one row */
-  grid-row: 2;
+  grid-row: 2/span 1;
 }
 
 header p{
@@ -170,10 +171,11 @@ header p{
   margin: auto;
   /*Your code here:*/
   /*Align the content in the center */
-  /* display: flex;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center; */
+
+  justify-content: center;
   text-align: center;
   overflow: scroll;
   max-height: 25%;
@@ -184,6 +186,9 @@ header p{
   .container{
     /*Your code here */
     /* See documentation for desktop view */
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
 
   nav{
@@ -196,11 +201,13 @@ header p{
    .about, .clients, .method-image, .contact-image {
     /*Your code here */
     /* See documentation for desktop view */
+    grid-column: 3/ span 2;
   }
 
   .method, .contact, .about-image, .clients-image {
     /*Your code here */
     /* See documentation for desktop view */
+    grid-column: 2/ span 2;
   }
 }  /*End the media query*/
 
