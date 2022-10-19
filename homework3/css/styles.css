@@ -138,7 +138,7 @@ header p{
    /* See documentation for mobile view */
    width: 100%;
    max-height: 500px;
-   grid-column: 2;
+   grid-column: 1 / -1;
    overflow: hidden;
 }
 
@@ -200,7 +200,8 @@ header p{
     padding: 35px 0px;
     align-self: center;
     position: relative;
-    align-items: flex-start;
+    align-items: flex-end;
+    grid-column: 1 / -1;
   }
 
    .about, .clients, .method-image, .contact-image {
