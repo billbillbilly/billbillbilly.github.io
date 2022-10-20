@@ -219,12 +219,6 @@ header p{
     /* See documentation for desktop view */
     grid-column: 2/ span 2;
   }
-}  /*End the media query*/
-
-@media screen and (prefers-reduced-motion: reduce) and (min-width: 800px){
-  html{
-    scroll-behavior: auto; /* Removes scroll animation */
-  }
 
   .skip a{
     -webkit-transition: none;
@@ -232,5 +226,16 @@ header p{
     position: relative;
     left: 0px;
     bottom: 0px;
+  }
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
   }
 }
