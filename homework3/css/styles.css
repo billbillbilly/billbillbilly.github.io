@@ -86,8 +86,7 @@ nav{
   padding: 20px 0;
   text-align: center;
   /*Your code here*/
-  position: absolute;
-  align-items: flex-start;
+
   /*Span the top row*/
   grid-row: 1;
   grid-column: 1 / -1;
@@ -122,6 +121,7 @@ header p{
 .container{
   /*Your code here  */
   /* See documentation for mobile view */
+  position:relative;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   row-gap: 30px;
@@ -174,14 +174,14 @@ header p{
   margin: auto;
   /*Your code here:*/
   /*Align the content in the center */
+  max-height: 25vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   overflow: scroll;
-  max-height: 25%;
-  grid-column: 2;
+  /* grid-column: 2; */
 }
 
 @media all and (min-width: 800px){
@@ -200,7 +200,7 @@ header p{
     padding: 35px 0px;
     align-self: center;
     position: relative;
-    align-items: flex-end;
+    align-items:flex-end;
     grid-column: 1 / -1;
   }
 
