@@ -86,7 +86,9 @@ nav{
   padding: 20px 0;
   text-align: center;
   /*Your code here*/
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   /*Span the top row*/
   grid-row: 1;
   grid-column: 1 / -1;
@@ -200,7 +202,9 @@ header p{
     padding: 35px 0px;
     align-self: center;
     position: relative;
-    align-items:flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     grid-column: 1 / -1;
   }
 
@@ -225,5 +229,8 @@ header p{
   .skip a{
     -webkit-transition: none;
     transition: none;
+    position: absolute;
+    left: 0;
+    top: 20px;
   }
 }
