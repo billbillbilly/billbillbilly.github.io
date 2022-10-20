@@ -47,7 +47,7 @@ nav a:hover{
   z-index: 1;
   /*Your code here - position relative to the parent */
   position: relative;
-  /*Your code here - place 500px left and 40px higher */;
+  /*Your code here - place 500px left and 40px higher */
   left: 500px;
   bottom: 40px;
 }
@@ -229,8 +229,9 @@ header p{
   .skip a{
     -webkit-transition: none;
     transition: none;
-    position: absolute;
-    left: 0;
-    top: 20px;
+    /*Your code here - position relative to the parent */
+    position: relative;
+    left: 0px;
+    bottom: 0px;
   }
 }
