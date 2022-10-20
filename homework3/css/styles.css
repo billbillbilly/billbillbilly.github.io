@@ -221,7 +221,7 @@ header p{
   }
 }  /*End the media query*/
 
-@media screen and (prefers-reduced-motion: reduce){
+@media screen and (prefers-reduced-motion: reduce) and (min-width: 800px){
   html{
     scroll-behavior: auto; /* Removes scroll animation */
   }
@@ -229,7 +229,6 @@ header p{
   .skip a{
     -webkit-transition: none;
     transition: none;
-    /*Your code here - position relative to the parent */
     position: relative;
     left: 0px;
     bottom: 0px;
