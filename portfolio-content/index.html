@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- All of the meta data for the page belongs in the header tag -->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/favicon.png">
-	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<title>Home</title>
-</head>
+	<!-- All of the meta data for the page belongs in the header tag -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="images/favicon.png">
+		<link rel="stylesheet" href="css/html5reset.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<title>Home</title>
+	</head>
 
-<body>
-	<header class="center">
-		<nav>
-			<ul>
-				<li><a class="active" href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-        <li><a href="instruction.html">Instruction</a></li>
-        <li><a href="app.html">Demo</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<a name="top"></a>
+		<header class="center">
+			<nav>
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+	        <li><a href="instruction.html">Instruction</a></li>
+	        <li><a href="app.html">Demo</a></li>
+				</ul>
+			</nav>
+		</header>
 
-	<main>
-		<h1 class="center">ReactiveCanvas</h1>
-		<div class="center">
-			<p>
-				ReactiveCanvas is a creative art project lauched from December 2020.
-				It is an interactive system that allows everyone to generate own artwork
-				with customizable inputs and rulesets. People can enjoy interacting with
-				their generated arts and download.
-			</p>
-		</div>
-		<figure id="parent">
-			<img class="center" src="images/homepage1.gif"/>
-			<img class="center" id="static" src="images/homepage1.png"/>
-			<figcaption class="center">Dynamic color sqaure in the 3D perspective</figcaption>
-		</figure>
-		<div class="center">
-			<p>
-				ReactiveCanvas is computed with the celular autometa algorithm based on
-				the Three.js framework. The art of ReactiveCanvas is generated in dynamic
-				3D-dimension. The celular autometa algorithm encodes the diversity of color,
-				form, space, and time. It allows people to create art freely and interact
-				with it from different perspectives.
-			</p>
-		</div>
-		<figure>
-			<img class="center" src="images/homepage2.png"/>
-			<figcaption class="center">Static random color squares</figcaption>
-		</figure>
-	</main>
+		<aside>
+			<a class="arrow fa fa-arrow-up" href="#top" style="font-size:6vw;" aria-label = "go_back_top"></a>
+		</aside>
 
-	<footer>
-		ReactiveCanvas
-	</footer>
-</body>
+		<main>
+			<h1 class="center">ReactiveCanvas</h1>
+			<div class="center">
+				<p>
+					ReactiveCanvas is a creative art project lauched from December 2020.
+					It is an interactive system that allows everyone to generate own artwork
+					with customizable inputs and rulesets. People can enjoy interacting with
+					their generated arts and download.
+				</p>
+			</div>
+			<figure id="parent">
+				<img class="center" src="images/homepage1.gif" alt = "main image"/>
+				<img class="center" id="static" src="images/homepage1.png"/>
+				<figcaption class="center">Dynamic color sqaure in the 3D perspective</figcaption>
+			</figure>
+			<div class="center">
+				<aside aria-label = "instruction">
+					<p>Three.js is a cross-browser JavaScript library and application programming
+						interface used to create and display animated 3D computer graphics in a web
+						browser using WebGL. </p>
+				</aside>
+				<p>
+					ReactiveCanvas is computed with the celular autometa algorithm based on
+					the Three.js framework. The art of ReactiveCanvas is generated in dynamic
+					3D-dimension. The celular autometa algorithm encodes the diversity of color,
+					form, space, and time. It allows people to create art freely and interact
+					with it from different perspectives.
+				</p>
+			</div>
+			<figure>
+				<img class="center" src="images/homepage2.png" alt = "second image"/>
+				<figcaption class="center">Static random color squares</figcaption>
+			</figure>
+		</main>
+
+		<footer>
+			ReactiveCanvas
+		</footer>
+	</body>
 </html>

@@ -1,9 +1,10 @@
 html {
   background-color: black;
+  background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/110755-dark-color-blurred-background-vector.jpg?w=800&q=95");
 }
 
 body {
-    margin: 2%;
+  margin: 2%;
 }
 
 header{
@@ -13,7 +14,6 @@ header{
 
 nav {
   position: fixed;
-  background-color: black;
   z-index: 9999;
 }
 
@@ -24,7 +24,7 @@ ul li {
 
 ul a {
   color: white;
-  font-family: serif, sans-serif, Helvetica;
+  font-family: Sono, sans-serif, Helvetica;
   font-size: min(2vw, 15px);
   text-align: center;
   text-decoration: none;
@@ -43,15 +43,26 @@ main {
   padding: 10px;
 }
 
+main aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: white;
+}
+
 h1 {
   font-size: min(6vw, 60px);
   color: white;
   padding-top: 3%;
   padding-bottom: min(3%, 20px);
+  z-index: 999;
 }
 
 p {
-  font-family: serif, sans-serif, Helvetica;
+  font-family: Sono, sans-serif, Helvetica;
   font-size: min(2vw, 15px);
   color: white;
   line-height: 2.5vw;
@@ -60,7 +71,7 @@ p {
 img {
   padding-top: 3%;
   padding-bottom: 1%;
-  border: 1px solid #555;
+  /* border: 1px solid #555; */
 }
 
 #parent {
@@ -77,6 +88,14 @@ img {
 
 #static:hover {
   opacity: 0;
+}
+
+.arrow {
+  visibility: hidden;
+  position: fixed;
+  color: white;
+  top: 130vw;
+  left: 90vw;
 }
 
 /* images/texts/desplay style */
@@ -108,12 +127,11 @@ footer {
   grid-template-columns: repeat(2,2fr);
   grid-template-rows: repeat(6,2fr);
   grid-gap: 10px;
-
 }
 
 .gallery figure {
-    object-fit: cover;
-    position: relative;
+  object-fit: cover;
+  position: relative;
 }
 
 .gallery img:hover {
@@ -138,4 +156,46 @@ footer {
 video {
   padding-bottom: min(1.5vw,10px);
   border: 1px solid #555;
+}
+
+main h1 {
+  position: relative;
+  animation-name: movement;
+  animation-duration: 4s;
+  animation-delay: -2s;
+}
+
+@keyframes movement {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+/* Mobile view */
+@media only screen and (max-width: 400px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .center {
+    width: 85%;
+  }
+
+  .arrow {
+    visibility: visible;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #title {
+    animation: none;
+  }
 }
