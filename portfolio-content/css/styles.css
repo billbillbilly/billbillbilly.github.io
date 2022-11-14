@@ -174,7 +174,7 @@ main h1 {
 }
 
 /* Mobile view */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 410px) {
   body {
     display: grid;
     grid-template-columns: repeat(1,1fr);
