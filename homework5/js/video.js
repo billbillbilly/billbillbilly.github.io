@@ -22,23 +22,29 @@ function pause_v() {
   vid.pause();
 }
 
+const speed_list = [0.5, 1, 2];
+
 // slow down
 document.getElementById("slower").addEventListener("click", slow_down);
 function slow_down() {
+  var level = speed_list.indexOf(vid.playbackRate);
   if (vid.playbackRate == .5) {
     alert("Video is at slowest speed!")
   }else {
-    vid.playbackRate = vid.playbackRate - 0.5;
+    level = level -  1;
+    vid.playbackRate = speed_list[level];
   }
 }
 
 // speed up
 document.getElementById("faster").addEventListener("click", speed_up);
 function speed_up() {
+  var level = speed_list.indexOf(vid.playbackRate);
   if (vid.playbackRate == 2) {
     alert("Video is at fastest speed!")
   } else {
-    vid.playbackRate = vid.playbackRate + 0.5;
+    level = level + 1;
+    vid.playbackRate = speed_list[level];
   }
 }
 
