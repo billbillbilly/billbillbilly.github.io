@@ -1,9 +1,11 @@
 html {
   background-color: black;
-  background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/110755-dark-color-blurred-background-vector.jpg?w=800&q=95");
+  /* background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/110755-dark-color-blurred-background-vector.jpg?w=800&q=95"); */
 }
 
 body {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
   margin: 2%;
 }
 
@@ -71,7 +73,6 @@ p {
 img {
   padding-top: 3%;
   padding-bottom: 1%;
-  /* border: 1px solid #555; */
 }
 
 #parent {
@@ -91,7 +92,7 @@ img {
 }
 
 .arrow {
-  visibility: hidden;
+  visibility: visible;
   position: fixed;
   color: white;
   top: 130vw;
@@ -103,7 +104,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 85%;
   max-width: 400px;
   min-width: 100px;
 }
@@ -123,9 +124,11 @@ footer {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(2,2fr);
-  grid-template-rows: repeat(6,2fr);
+  /* display: grid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
   grid-gap: 10px;
 }
 
@@ -143,9 +146,10 @@ footer {
 }
 
 .gallerycol {
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  grid-template-rows: repeat(2,2fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
   grid-gap: 10px;
 }
 
@@ -165,6 +169,66 @@ main h1 {
   animation-delay: -2s;
 }
 
+#contact_form {
+  /* background-color: #405d27; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  }
+
+.row label{
+  color: #FFFFFF;
+  font-size: min(2vw, 15px);
+  margin-left: 10px;
+}
+
+input[type=text], textarea {
+  text-align: center;
+  /* background-color: #82b74b; */
+  border-radius: 10px;
+  margin: auto 0;
+  color: black;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* box-shadow: 5px 5px 10px #3e4444; */
+  }
+
+input[type=text] {
+  height: 25px;
+}
+
+input[type=submit] {
+  /* background-color: #ff7b25; */
+  color: black;
+  border-radius: 10px;
+  font-size: min(2vw, 15px);
+  margin-left: 10px;
+  /* box-shadow: 5px 5px 5px #3e4444; */
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: relative;
+  left: 500px;
+  bottom: 40px;
+}
+
+.skip a:focus{
+  background: white;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+}
+
 @keyframes movement {
   0%   {left:0px; top:0px;}
   25%  {left:200px; top:0px;}
@@ -174,23 +238,85 @@ main h1 {
 }
 
 /* Mobile view */
-@media only screen and (max-width: 410px) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+@media only screen and (max-width: 399px) {
+  header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    max-width: 400px;
+    min-width: 100px;
   }
+}
+
+/* Tablet View */
+@media only screen and (min-width: 400px) {
 
   .center {
-    width: 85%;
+    width: 100%;
+    max-width: 799px;
+  }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 800px) {
+  body {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  header {
+    grid-column: 2;
+    align-self: end;
+  }
+
+  main {
+    grid-column: 1;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  h1 {
+    grid-column: 1;
+    grid-column: 1 / -1;
+  }
+
+  figure {
+    grid-column: 2;
+  }
+
+  footer {
+    grid-column: 1;
+    grid-column: 1 / -1;
   }
 
   .arrow {
-    visibility: visible;
+    visibility: hidden;
+  }
+
+  .center {
+    width: 100%;
+    max-width: 500px;
   }
 
   .gallery {
-    display: flex;
-    flex-direction: column;
+    grid-column: 2;
+  }
+
+  .gallerycol {
+    grid-column: 2;
+  }
+
+  video {
+    grid-column: 2;
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
   }
 }
 

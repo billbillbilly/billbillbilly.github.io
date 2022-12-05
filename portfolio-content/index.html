@@ -9,11 +9,19 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 		<title>Home</title>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PM7K529KM"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-0PM7K529KM');
+		</script>
 	</head>
 
 	<body>
 		<a name="top"></a>
-		<header class="center">
+		<header>
 			<nav>
 				<ul>
 					<li><a class="active" href="index.html">Home</a></li>
@@ -33,6 +41,12 @@
 			<div class="center">
 				<p>
 					ReactiveCanvas is a creative art project lauched from December 2020.
+					It is an interactive system that allows everyone to generate own artwork
+					with customizable inputs and rulesets. People can enjoy interacting with
+					their generated arts and download. ReactiveCanvas is a creative art project lauched from December 2020.
+					It is an interactive system that allows everyone to generate own artwork
+					with customizable inputs and rulesets. People can enjoy interacting with
+					their generated arts and download. ReactiveCanvas is a creative art project lauched from December 2020.
 					It is an interactive system that allows everyone to generate own artwork
 					with customizable inputs and rulesets. People can enjoy interacting with
 					their generated arts and download.
@@ -61,6 +75,26 @@
 				<img class="center" src="images/homepage2.png" alt = "second image"/>
 				<figcaption class="center">Static random color squares</figcaption>
 			</figure>
+
+			<form id="contact_form" class="center" action="https://formspree.io/f/mrgdngby" method="POST" enctype="multipart/form-data">
+			  <div class="row">
+			    <label class="required" for="name">Your name:</label><br />
+			    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+			    <span id="name_validation" class="error_message"></span>
+			  </div>
+			  <div class="row">
+			    <label class="required" for="email">Your email:</label><br />
+			    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+			    <span id="email_validation" class="error_message"></span>
+			  </div>
+			  <div class="row">
+			    <label class="required" for="message">Your message:</label><br />
+			    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+			    <span id="message_validation" class="error_message"></span>
+			  </div>
+
+		    <input id="submit_button" type="submit" value="Send email" />
+			</form>
 		</main>
 
 		<footer>
