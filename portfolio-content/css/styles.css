@@ -1,6 +1,5 @@
 html {
   background-color: black;
-  /* background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/110755-dark-color-blurred-background-vector.jpg?w=800&q=95"); */
 }
 
 body {
@@ -97,6 +96,7 @@ img {
   color: white;
   top: 130vw;
   left: 90vw;
+  z-index: 9999;
 }
 
 /* images/texts/desplay style */
@@ -251,10 +251,50 @@ input[type=submit] {
 
 /* Tablet View */
 @media only screen and (min-width: 400px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+    grid-auto-flow: dense;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+  }
+
+  main figure {
+    order: 1;
+  }
+
+  #p_1 {
+    order: 2;
+  }
+
+  #p_2 {
+    order: 3;
+  }
+
+  form {
+    order: 4;
+  }
+
+  .gallery {
+    order: 3;
+    grid-column: 1 / -1;
+  }
+
+  .gallerycol {
+    order: 1;
+    /* grid-column: 1; */
+  }
 
   .center {
     width: 100%;
     max-width: 799px;
+  }
+
+  .arrow {
+    top: 100vw;
   }
 }
 
@@ -323,5 +363,10 @@ input[type=submit] {
 @media screen and (prefers-reduced-motion: reduce) {
   #title {
     animation: none;
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
   }
 }
