@@ -1,7 +1,6 @@
 // npm install citation-js
 // npm install -g browserify
 // browserify reference.js -o bundle.js
-// import Cite from "./node_modules/citation-js/index.js";
 
 const Cite = require('citation-js');
 const refList = {
@@ -10,6 +9,7 @@ const refList = {
     'Gemmeke et al., 2017':'10.1109/ICASSP.2017.7952261',
     'Seresinhe et al., 2015': '10.1038/srep16899',
     'Xie et al., 2022': '10.1177/23998083211059838',
+    'Konrad et al., 2021': '10.1002/pan3.10215',
 }
 
 const sortObj = (obj) => {
