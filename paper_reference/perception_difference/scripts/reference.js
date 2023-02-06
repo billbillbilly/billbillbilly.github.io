@@ -3,6 +3,7 @@
 // browserify reference.js -o bundle.js
 
 const Cite = require('citation-js');
+
 const refList = {
     'Fan et al., 2017':'10.1109/ACII.2017.8273600',
     'Aiello et al., 2016':'10.1098/rsos.150690',
