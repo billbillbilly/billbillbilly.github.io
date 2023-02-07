@@ -1,10 +1,15 @@
+body {
+    background-color: rgb(8, 0, 255);
+}
 h1 {
+    color: rgb(252, 178, 255);
     font-size: 3vw;
     font-family: monospace;
     word-spacing: -1px;
     padding-left: 2vw;
 }
 h2 {
+    color: rgb(252, 178, 255);
     font-size: 1.5vw;
     font-family: monospace;
     padding-left: 2vw;
@@ -13,8 +18,7 @@ button {
     font-size: 0.8vw;
     font-family: monospace;
     background-color: rgb(176, 176, 176);
-    border-color: rgb(255, 255, 255);
-    border-width: 0.5px;
+    border-width: 0px;
     border-radius: 5px;
     color: rgb(255, 255, 255);
 }
@@ -25,7 +29,22 @@ input {
     font-family: monospace;
     font-size: 1vw;
 }
+i {
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+b {
+    background-color: rgb(8, 0, 255);
+    color: aliceblue;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
 .col {
+    background-color: rgb(252, 178, 255);
     display: flex;
     flex-direction: row;
     height : 31vh;
@@ -35,7 +54,6 @@ input {
     margin-right: 2vw;
     border-color: rgb(183, 183, 183);
     border-width: 5px;
-    border-style: dashed;
     border-radius: 10px;
     padding-top: 15px;
     padding-left: 2vw;
@@ -43,7 +61,10 @@ input {
 }
 
 label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 0.9vw; 
+    word-spacing: -0.2vw; 
+    letter-spacing: -0.05vw;
 }
 .box1 {
     display: flex;
@@ -63,7 +84,7 @@ textarea {
     background-color: rgba(127, 255, 212, 0.773);
     border: 1px;
     border-radius: 10px;
-    height: 18vh;
+    height: 15.5vh;
     overflow: scroll;
     overflow-x: hidden;
     font-size: 0.85vw;
@@ -85,5 +106,5 @@ textarea {
     padding-top: 10px;
     padding-left: 2vw;
     padding-right: 2vw;
-    background-color: aquamarine;
+    background-color: rgb(255, 223, 229);
 }

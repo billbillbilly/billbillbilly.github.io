@@ -15,16 +15,17 @@
         <div class="col">
             <div class="box1">
                 <div class="datainput">
-                    <label for="paper">1. Paste paper:
+                    <label for="paper"><b>1</b> Paste manuscript text:
                         <br><br>
                         <textarea id="paper" name="paper" rows="10" cols="50" 
-                        style="background-color:pink; 
+                        style="background-color:rgb(255, 223, 229);
                         border-radius: 10px"></textarea><br><br>
-                        <button onclick="loadPaper()">Load your paper</button>
+                        <button onclick="loadPaper()">Load your manuscript</button>
                     </label><br>
                 </div>
                 <div class="datainput">
-                    <label for="doidata">Paste author-DOI data (if applied):
+                    <label for="doidata" style="font-family: 'Courier New', Courier, monospace;">
+                        Paste author-DOI data (if applied):
                         <br><br>
                         <textarea id="doiinput" name="doidata" rows="10" cols="50" 
                         style="background-color:rgb(255, 223, 229); border-radius: 10px;"></textarea><br><br>
@@ -33,19 +34,19 @@
                 </div>
             </div>
             <div class="box2">
-                <label for="cite">2. Add DOI to the paper: <i id="authname"></i>
+                <label for="cite"><b>2</b> Add DOI to the paper: <i id="authname" style="color: black;"></i>
                     <input type="text" id="doi" name="cite" style="width: 10vw;">
                     <button onclick="addDOI()">Add</button>
                     <button onclick="nextPaper()" style="margin-left: 1vw;">Skip this paper</button><br>
-                </label><br>
-                <div class="display_box">Saved citations will be shown here.</div><br>
-                <label for="remove">Set in-text citation to remove the data
+                </label>
+                <label for="remove" style="margin-left: 1.2vw;">
+                    Set in-text citation to remove the data
                     <input type="text" id="removedoi" name="remove" 
-                    style="width:5vw; margin-left:0.5vw;">
+                    style="width:5vw; margin-left:0.5vw; margin-top: 1vh;">
                     <button onclick="removeData()" >Remove</button>
                 </label>
-                <button onclick="exportLocalData()" 
-                style="margin-left: 3vw;">Copy author-DOI data</button>
+                <div class="display_box" style="margin-top: 1vh;">Saved citations will be shown here.</div><br>
+                <button onclick="exportLocalData()">Copy author-DOI data</button>
                 <button onclick="cleanData()" 
                 style="margin-left: 0.5vw;">Clean all data</button>
             </div>
