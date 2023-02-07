@@ -2,8 +2,8 @@
 // npm install -g browserify
 // browserify citation_detect.js -o bundle.js
 
-const one_auth_pattern1 = /(?<!and|&\s)([A-Z][a-z]+),\s(\d{4})/g;
-const one_auth_pattern2 = /(?<!and|&\s)([A-Z][a-z]+)\s\((\d{4})\)/g;
+const one_auth_pattern1 = /(?<!and\s| &\s)([A-Z][a-z]+),\s(\d{4})/g;
+const one_auth_pattern2 = /(?<!and\s| &\s)([A-Z][a-z]+)\s\((\d{4})\)/g;
 const two_auth_pattern1 = /([A-Z][a-z]+ and [A-Z][a-z]+|[A-Z][a-z]+ & [A-Z][a-z]+), (\d{4})/g;
 const two_auth_pattern2 = /([A-Z][a-z]+ and [A-Z][a-z]+|[A-Z][a-z]+ & [A-Z][a-z]+) \((\d{4})\)/g;
 const multi_auth_pattern = /([A-Z][a-z]+ et al\., \d{4})/g;
@@ -21,6 +21,7 @@ const loadPaper = () => {
     let citation = {};
     fullText = document.querySelector("#paper").value;
     if (fullText.match(one_auth_pattern1)) {
+        console.log(fullText.match(one_auth_pattern1));
         fullText.match(one_auth_pattern1).forEach(element => {
             authorList.push(element);
         });
