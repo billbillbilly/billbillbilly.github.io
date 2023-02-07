@@ -1,3 +1,7 @@
+// npm install citation-js
+// npm install -g browserify
+// browserify citation_detect.js -o bundle.js
+
 const one_auth_pattern1 = /(?<!and|&\s)([A-Z][a-z]+),\s(\d{4})/g;
 const one_auth_pattern2 = /(?<!and|&\s)([A-Z][a-z]+)\s\((\d{4})\)/g;
 const two_auth_pattern1 = /([A-Z][a-z]+ and [A-Z][a-z]+|[A-Z][a-z]+ & [A-Z][a-z]+), (\d{4})/g;
@@ -7,7 +11,8 @@ const multi_auth_pattern = /([A-Z][a-z]+ et al\., \d{4})/g;
 // console.log(string.match(two_auth_pattern2));
 let fullText;
 let authorList = [];
-let display = document.querySelector("#display");
+let doiData;
+
 // console.log(string.match(one_auth_pattern2));
 const cleanData = () => {
     localStorage.clear();
@@ -52,17 +57,65 @@ const loadPaper = () => {
     document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
 }
 
+const loadDOI = () => {
+    localStorage.clear();
+    doiData = JSON.parse(document.querySelector("#doiinput").value);
+    let newObject = {};
+    for (const auth in doiData) {
+        localStorage.setItem(auth, doiData[auth]);
+        newObject[auth] = doiData[auth];
+    }
+    localStorage.setItem('dic', JSON.stringify(newObject));
+    document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
+}
+
 if (localStorage.getItem('dic')) {
     setTimeout(() => {
         document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
     }, 1000*2);
-    
+}
 
-    for (let index = 0; index < localStorage.length; index++) {
-        if (localStorage.getItem(localStorage.key(index)) === '') {
+const exportLocalData = () => {
+    alert(localStorage.getItem('dic'));
+}
 
+let index = 0;
+let intervalFunc;
+const getEmptyCite = () => {
+    if (localStorage.getItem(localStorage.key(index)) === '') {
+        document.querySelector("#authname").textContent = localStorage.key(index);
+    } else {
+        index++;
+    }
+    if (index >= (localStorage.length-1)) {
+        index = 0;
+    }
+}
+setInterval(getEmptyCite, 1000);
+
+const addDOI = () => {
+    let thisAuthname = document.querySelector("#authname").textContent;
+    let thisDOI = document.querySelector("#doi").value;
+    let newObject = {};
+    if (localStorage.getItem(thisAuthname) === '') {
+        localStorage.setItem(thisAuthname, thisDOI);
+        for (let i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i) != 'dic') {
+                newObject[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
+            }
         }
-        
+        localStorage.setItem('dic', JSON.stringify(newObject));
+        document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
     }
 }
 
+const sortObj = (obj) => {
+    return Object.keys(obj).sort().reduce((result, key) => {
+      result[key] = obj[key];
+      return result;
+    }, {});
+}
+
+const renderCitation = () => {
+    alert("Bibgraphy has been rendered!")
+}

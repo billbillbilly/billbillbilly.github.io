@@ -1,12 +1,26 @@
+h1 {
+    font-size: 3vw;
+}
+button {
+    font-size: 1vw;
+}
 .col {
     display: flex;
     flex-direction: row;
     height : 30vh;
     gap: 3vw;
+    font-size: 1.1vw;
 }
 .box1 {
+    display: flex;
     width: 40%;
     padding-left: 2vw;
+}
+.datainput {
+    width: 50%;
+}
+textarea {
+    width: 15vw;
 }
 .box2 {
     width: 60%;
