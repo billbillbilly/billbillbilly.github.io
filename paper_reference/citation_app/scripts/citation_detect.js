@@ -16,6 +16,7 @@ let doiData;
 // console.log(string.match(one_auth_pattern2));
 const cleanData = () => {
     localStorage.clear();
+    location.reload();
 }
 const loadPaper = () => {
     let citation = {};
