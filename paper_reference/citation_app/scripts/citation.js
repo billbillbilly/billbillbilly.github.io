@@ -3,7 +3,14 @@
 // browserify citation.js -o bundle.js
 const Cite = require('citation-js');
 
-window.onclick = async() => {
+const sortObj = (obj) => {
+    return Object.keys(obj).sort().reduce((result, key) => {
+      result[key] = obj[key];
+      return result;
+    }, {});
+}
+
+window.onload = async() => {
     if (localStorage.getItem('dic')) {
         document.querySelector('#ref').innerHTML = "";
         let sortedRef = sortObj(JSON.parse(localStorage.getItem('dic')));

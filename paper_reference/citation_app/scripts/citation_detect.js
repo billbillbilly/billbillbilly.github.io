@@ -109,13 +109,19 @@ const addDOI = () => {
     }
 }
 
-const sortObj = (obj) => {
-    return Object.keys(obj).sort().reduce((result, key) => {
-      result[key] = obj[key];
-      return result;
-    }, {});
+const removeData = () => {
+    let thisPaper = document.querySelector("#removedoi").value;
+    let newObject = {};
+    localStorage.removeItem(thisPaper);
+    localStorage.removeItem('dic');
+    for (let i = 0; i < localStorage.length; i++) {
+        newObject[localStorage.key(i)] = localStorage.getItem(localStorage.key(i)); 
+    }
+    localStorage.setItem('dic', JSON.stringify(newObject));
+    document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
 }
 
 const renderCitation = () => {
     alert("Bibgraphy has been rendered!")
+    location.reload();
 }
