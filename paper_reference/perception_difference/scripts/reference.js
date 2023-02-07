@@ -36,15 +36,3 @@ window.onload = async() => {
         document.querySelector('#ref').innerHTML += "<br>";
     }
 }
-// for (const auth in refList) {
-//     let citeation = await Cite.async(refList[auth]);
-//     let ref = citeation.format(
-//         'bibliography', 
-//     {
-//         format: 'html',
-//         template: 'apa',
-//         lang: 'en-US'
-//     });
-//     // document.querySelector('#ref').innerHTML += ref;
-//     console.log(ref);
-// }

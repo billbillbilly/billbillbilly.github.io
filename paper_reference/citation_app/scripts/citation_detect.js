@@ -93,6 +93,10 @@ const getEmptyCite = () => {
 }
 setInterval(getEmptyCite, 1000);
 
+const nextPaper = () => {
+    index++;
+}
+
 const addDOI = () => {
     let thisAuthname = document.querySelector("#authname").textContent;
     let thisDOI = document.querySelector("#doi").value;
