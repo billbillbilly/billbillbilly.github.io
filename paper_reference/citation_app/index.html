@@ -5,14 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="scripts/style.css">
 </head>
-<!-- <script src="scripts/bundle.js"></script> -->
+<script src="scripts/bundle.js"></script>
+<script src="scripts/citation_detect.js"></script>
 <body>
+    <h1>APA Citation Convertor - From in-text citation to bibgraphy</h1>
     <div>
-        <label for="paper">Paste your paper here</label><br>
-        <textarea id="paper" name="paper" rows="4" cols="50">
-            Paste text here...
-        </textarea>
+        <div class="col">
+            <div class="box1">
+                <label for="paper">Paste your paper here:
+                    <br><br>
+                    <textarea id="paper" name="paper" rows="10" cols="50"></textarea><br><br>
+                    <button onclick="loadPaper()">Load your paper</button>
+                </label><br>
+                <output id="display"></output> <br>
+            </div>
+            <div class="box2">
+                <label for="cite">Add DOI of the paper writen by <i id="authname"></i>
+                    <input type="text" id="doi" name="cite">
+                    <button onclick="">Add</button><br>
+                </label><br>
+                <div class="display_box">Saved citations will be shown here.</div><br>
+                <label for="remove">Set in-text citaton to remove the data
+                    <input type="text" id="removedoi" name="remove">
+                    <button>Remove</button>
+                </label>
+                <button onclick="cleanData()">Clean all data</button>
+                
+            </div>
+        </div>
     </div>
     <h1>Reference</h1>
     <div id="ref"></div>
