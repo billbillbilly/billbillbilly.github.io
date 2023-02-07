@@ -75,8 +75,10 @@ if (localStorage.getItem('dic')) {
     }, 1000*2);
 }
 
-const exportLocalData = () => {
-    alert(localStorage.getItem('dic'));
+const exportLocalData = async() => {
+    let copyText = document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent;
+    await navigator.clipboard.writeText(copyText);
+    alert("Data has been copied to your clipboard!");
 }
 
 let index = 0;

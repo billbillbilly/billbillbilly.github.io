@@ -10,44 +10,49 @@
 <script src="scripts/bundle.js"></script>
 <script src="scripts/citation_detect.js"></script>
 <body>
-    <h1>APA Citation Convertor - From in-text citation to bibgraphy</h1>
+    <h1>APA Citation Manager</h1>
     <div>
         <div class="col">
             <div class="box1">
                 <div class="datainput">
-                    <label for="paper">Paste paper:
+                    <label for="paper">1. Paste paper:
                         <br><br>
-                        <textarea id="paper" name="paper" rows="10" cols="50"></textarea><br><br>
+                        <textarea id="paper" name="paper" rows="10" cols="50" 
+                        style="background-color:pink; 
+                        border-radius: 10px"></textarea><br><br>
                         <button onclick="loadPaper()">Load your paper</button>
                     </label><br>
                 </div>
                 <div class="datainput">
-                    <label for="doidata">Paste author-DOI data:
+                    <label for="doidata">Paste author-DOI data (if applied):
                         <br><br>
-                        <textarea id="doiinput" name="doidata" rows="10" cols="50"></textarea><br><br>
+                        <textarea id="doiinput" name="doidata" rows="10" cols="50" 
+                        style="background-color:rgb(255, 223, 229); border-radius: 10px;"></textarea><br><br>
                         <button onclick="loadDOI()">Load your data</button>
                     </label><br>
                 </div>
             </div>
             <div class="box2">
-                <label for="cite">Add DOI of the paper: <i id="authname" style="padding-right: 1vw;"></i>
+                <label for="cite">2. Add DOI to the paper: <i id="authname"></i>
                     <input type="text" id="doi" name="cite" style="width: 10vw;">
                     <button onclick="addDOI()">Add</button>
                     <button onclick="nextPaper()" style="margin-left: 1vw;">Skip this paper</button><br>
                 </label><br>
                 <div class="display_box">Saved citations will be shown here.</div><br>
-                <label for="remove">Set in-text citaton to remove the data
-                    <input type="text" id="removedoi" name="remove" style="width: 5vw;">
-                    <button onclick="removeData()">Remove</button>
+                <label for="remove">Set in-text citation to remove the data
+                    <input type="text" id="removedoi" name="remove" 
+                    style="width:5vw; margin-left:0.5vw;">
+                    <button onclick="removeData()" >Remove</button>
                 </label>
-                <button onclick="exportLocalData()" style="margin-left: 1vw;">Export data</button>
-                <button onclick="cleanData()" style="margin-left: 1vw;">Clean all data</button>
+                <button onclick="exportLocalData()" 
+                style="margin-left: 3vw;">Copy data</button>
+                <button onclick="cleanData()" 
+                style="margin-left: 0.5vw;">Clean all data</button>
             </div>
         </div>
     </div><br>
-    <h1>Bibgraphy</h1>
-    <button onclick="renderCitation()">Render bibgraphy</button><br><br>
+    <h2>Bibliography</h2>
+    <button onclick="renderCitation()" style="margin-left: 2vw;">Render bibliography</button><br><br>
     <div id="ref" style="font-size: 1vw;"></div>
 </body>
 </html>
-<!-- python -m http.server > http://localhost:8000/index.html -->

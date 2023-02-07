@@ -1,37 +1,89 @@
 h1 {
     font-size: 3vw;
+    font-family: monospace;
+    word-spacing: -1px;
+    padding-left: 2vw;
+}
+h2 {
+    font-size: 1.5vw;
+    font-family: monospace;
+    padding-left: 2vw;
 }
 button {
+    font-size: 0.8vw;
+    font-family: monospace;
+    background-color: rgb(176, 176, 176);
+    border-color: rgb(255, 255, 255);
+    border-width: 0.5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+input {
+    border-radius: 5px;
+    border-color: rgb(159, 159, 159);
+    border-width: 0.7px;
+    font-family: monospace;
     font-size: 1vw;
 }
 .col {
     display: flex;
     flex-direction: row;
-    height : 30vh;
+    height : 31vh;
     gap: 3vw;
-    font-size: 1.1vw;
+    font-size: 1vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-color: rgb(183, 183, 183);
+    border-width: 5px;
+    border-style: dashed;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-left: 2vw;
+    padding-right: 1vw;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
 }
 .box1 {
     display: flex;
     width: 40%;
-    padding-left: 2vw;
 }
 .datainput {
     width: 50%;
 }
 textarea {
     width: 15vw;
+    height: 19vh;
 }
 .box2 {
     width: 60%;
-    padding-right: 2vw;
 }
 .display_box {
     background-color: rgba(127, 255, 212, 0.773);
     border: 1px;
     border-radius: 10px;
-    width: 50vw;
-    height: 20vh;
+    height: 18vh;
     overflow: scroll;
     overflow-x: hidden;
+    font-size: 0.85vw;
+    font-family: monospace;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+}
+
+#authname {
+    margin-right: 1vw;
+    background-color: aquamarine;
+}
+
+#ref {
+    border-radius: 10px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: aquamarine;
 }
