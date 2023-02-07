@@ -1,0 +1,23 @@
+.col {
+    display: flex;
+    flex-direction: row;
+    height : 30vh;
+    gap: 3vw;
+}
+.box1 {
+    width: 40%;
+    padding-left: 2vw;
+}
+.box2 {
+    width: 60%;
+    padding-right: 2vw;
+}
+.display_box {
+    background-color: rgba(127, 255, 212, 0.773);
+    border: 1px;
+    border-radius: 10px;
+    width: 50vw;
+    height: 20vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
