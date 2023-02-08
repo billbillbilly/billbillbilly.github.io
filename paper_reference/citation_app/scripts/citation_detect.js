@@ -127,6 +127,11 @@ const addDOI = () => {
     }
 }
 
+const retriveData = () => {
+    const thisPaper = document.querySelector("#removedoi").value;
+    window.open(`https://doi.org/${localStorage.getItem(thisPaper)}`);
+}
+
 const removeData = () => {
     let thisPaper = document.querySelector("#removedoi").value;
     let newObject = {};

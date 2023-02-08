@@ -40,10 +40,12 @@
                     <button onclick="nextPaper()" style="margin-left: 1vw;">Skip this paper</button><br>
                 </label>
                 <label for="remove" style="margin-left: 1.2vw;">
-                    Set in-text citation to remove the data
+                    Set in-text citation 
                     <input type="text" id="removedoi" name="remove" 
                     style="width:5vw; margin-left:0.5vw; margin-top: 1vh;">
-                    <button onclick="removeData()" >Remove</button>
+                    to
+                    <button onclick="retriveData()">Loop up abstract</button> / 
+                    <button onclick="removeData()">Remove citation</button>
                 </label>
                 <div class="display_box" style="margin-top: 1vh;">Saved citations will be shown here.</div><br>
                 <button onclick="exportLocalData()">Copy author-DOI data</button>
@@ -53,7 +55,9 @@
         </div>
     </div><br>
     <h2>Bibliography</h2>
-    <button onclick="renderCitation()" style="margin-left: 2vw;">Render bibliography</button><br><br>
+    <button onclick="renderCitation()" 
+    style="margin-left: 2vw; font-weight: bolder; padding-bottom: 5px; padding-top: 4px;">
+    Render bibliography</button><br><br>
     <div id="ref" style="font-size: 1vw;"></div>
 </body>
 </html>
