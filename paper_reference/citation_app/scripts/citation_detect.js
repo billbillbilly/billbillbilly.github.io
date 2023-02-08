@@ -55,6 +55,16 @@ const loadPaper = () => {
     authorList.forEach(element => {
         citation[element] = localStorage.getItem(element);
     });
+    // drop unused citation
+    if (localStorage.getItem('dic')) {
+        if (JSON.stringify(citation) != localStorage.getItem('dic')) {
+            for (let i = 0; i < localStorage.length; i++) {
+                if (citation[localStorage.getItem(localStorage.key(i))] === null && localStorage.key(i) != 'dic') {
+                    localStorage.removeItem(localStorage.key(i));
+                }
+            }
+        }
+    }
     localStorage.setItem('dic', JSON.stringify(citation));
     document.querySelector("body > div:nth-child(2) > div > div.box2 > div").textContent = localStorage.getItem('dic');
 }
