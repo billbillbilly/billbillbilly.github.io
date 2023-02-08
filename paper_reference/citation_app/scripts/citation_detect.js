@@ -100,6 +100,7 @@ const getEmptyCite = () => {
         document.querySelector("#authname").textContent = localStorage.key(index);
     } else {
         index++;
+        document.querySelector("#authname").textContent = '';
     }
     if (index >= (localStorage.length-1)) {
         index = 0;
@@ -129,7 +130,14 @@ const addDOI = () => {
 
 const retriveData = () => {
     const thisPaper = document.querySelector("#removedoi").value;
-    window.open(`https://doi.org/${localStorage.getItem(thisPaper)}`);
+    console.log(thisPaper);
+    if (localStorage.getItem(thisPaper) != "" && localStorage.getItem(thisPaper)) {
+        window.open(`https://doi.org/${localStorage.getItem(thisPaper)}`);
+    } else if (localStorage.getItem(thisPaper) === "") {
+        alert("Please add DOI to this paper before looking up the abstract!");
+    } else if (thisPaper === "") {
+        alert("Please set in-text citation!");
+    }
 }
 
 const removeData = () => {
@@ -148,3 +156,54 @@ const renderCitation = () => {
     alert("Bibgraphy has been rendered!")
     location.reload();
 }
+
+let isDark = false;
+// const normalColor = document.querySelector("body").style.backgroundColor;
+const switchMode = async() => {
+    if (!isDark) {
+        document.querySelector("body > h1").style.color = "rgb(176, 176, 176)";
+        document.querySelector("body > h2").style.color = "rgb(176, 176, 176)";
+        document.querySelector("#paper").style.backgroundColor = "white";
+        document.querySelector("#doiinput").style.backgroundColor = "white";
+        document.querySelector("body > div:nth-child(2) > div").style.backgroundColor = "rgb(120, 120, 120)";
+        document.querySelector("body").style.backgroundColor = "rgb(83, 83, 83)";
+        document.querySelector("body > div:nth-child(2) > div > div.box2 > div").style.backgroundColor = "rgb(176, 176, 176)";
+        const allBs = document.querySelectorAll("b");
+        allBs.forEach(b => {
+            b.style.backgroundColor = "rgb(40, 40, 40)";
+        });
+        const allLabels = document.querySelectorAll("label");
+        allLabels.forEach(label => {
+            label.style.color = "white";
+        });
+
+        document.querySelector("body > h1 > div > div").textContent = "Night";
+        document.querySelector("#ref").style.backgroundColor = "rgb(120, 120, 120)";
+        document.querySelector("#ref").style.color = "black";
+    } else {
+        document.querySelector("body > h1").style.color = "rgb(252, 178, 255)";
+        document.querySelector("body > h2").style.color = "rgb(252, 178, 255)";
+        document.querySelector("#paper").style.backgroundColor = "rgb(255, 223, 229)";
+        document.querySelector("#doiinput").style.backgroundColor = "rgb(255, 223, 229)";
+        document.querySelector("body > div:nth-child(2) > div").style.backgroundColor = "rgb(252, 178, 255)";
+        document.querySelector("body").style.backgroundColor = "rgb(8, 0, 255)";
+        document.querySelector("body > div:nth-child(2) > div > div.box2 > div").style.backgroundColor = "rgba(127, 255, 212, 0.773)";
+        const allBs = document.querySelectorAll("b");
+        allBs.forEach(b => {
+            b.style.backgroundColor = "rgb(8, 0, 255)";
+        });
+        const allLabels = document.querySelectorAll("label");
+        allLabels.forEach(label => {
+            label.style.color = "black";
+        });
+        document.querySelector("body > h1 > div > div").textContent = "Day";
+        document.querySelector("#ref").style.backgroundColor = "rgb(252, 178, 255)";
+        document.querySelector("#ref").style.color = "white";
+    }
+    isDark = !isDark;
+}
+
+window.onload = async() => {
+    await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
+}
+

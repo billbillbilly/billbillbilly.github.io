@@ -4,10 +4,11 @@ body {
 
 h1 {
     color: rgb(252, 178, 255);
-    font-size: 3vw;
+    font-size: max(35px, 3vw);
     font-family: monospace;
     word-spacing: -1px;
     padding-left: 2vw;
+    display:flex;
 }
 
 h2 {
@@ -27,7 +28,7 @@ button {
 }
 
 button:hover {
-    background-color: aquamarine;
+    background-color: aquamarine !important;
     color: black;
 }
 
@@ -61,7 +62,9 @@ b {
     background-color: rgb(252, 178, 255);
     display: flex;
     flex-direction: row;
-    height : 31vh;
+    height : 32vh;
+    max-height: 300px;
+    min-height: 299px;
     gap: 3vw;
     font-size: 1vw;
     margin-left: 2vw;
@@ -93,6 +96,7 @@ label {
 textarea {
     width: 15vw;
     height: 19vh;
+    min-height: 180px;
 }
 
 .box2 {
@@ -104,6 +108,7 @@ textarea {
     border: 1px;
     border-radius: 10px;
     height: 15.5vh;
+    min-height: 145px;
     overflow: scroll;
     overflow-x: hidden;
     font-size: 0.85vw;
@@ -138,3 +143,65 @@ textarea {
     background-color: rgb(252, 178, 255);
 }
 
+/* switch button */
+.switch {
+    position:relative;
+    display: inline-block;
+    width: 45px;
+    height: 17px;
+    top: 5px;
+    align-self: center;
+    margin-left: 0.5vw;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 1.45px;
+    background-color: rgb(8, 0, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(252, 178, 255);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(252, 178, 255);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26.5px);
+    -ms-transform: translateX(26.5px);
+    transform: translateX(26.5px);
+}
+
+.slider.round {
+    border-radius: 3vw;
+}
+
+.slider.round:before {
+    border-radius: 45%;
+}
