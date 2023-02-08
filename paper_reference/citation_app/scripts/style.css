@@ -1,6 +1,7 @@
 body {
     background-color: rgb(8, 0, 255);
 }
+
 h1 {
     color: rgb(252, 178, 255);
     font-size: 3vw;
@@ -8,12 +9,14 @@ h1 {
     word-spacing: -1px;
     padding-left: 2vw;
 }
+
 h2 {
     color: rgb(252, 178, 255);
     font-size: 1.5vw;
     font-family: monospace;
     padding-left: 2vw;
 }
+
 button {
     font-size: 0.8vw;
     font-family: monospace;
@@ -22,6 +25,12 @@ button {
     border-radius: 5px;
     color: rgb(255, 255, 255);
 }
+
+button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
 input {
     border-radius: 5px;
     border-color: rgb(159, 159, 159);
@@ -29,11 +38,15 @@ input {
     font-family: monospace;
     font-size: 1vw;
 }
+
 i {
     border-radius: 5px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    font-weight: bolder;
+    color: rgb(66, 66, 66);
 }
+
 b {
     background-color: rgb(8, 0, 255);
     color: aliceblue;
@@ -43,6 +56,7 @@ b {
     padding-top: 1px;
     padding-bottom: 1px;
 }
+
 .col {
     background-color: rgb(252, 178, 255);
     display: flex;
@@ -66,20 +80,25 @@ label {
     word-spacing: -0.2vw; 
     letter-spacing: -0.05vw;
 }
+
 .box1 {
     display: flex;
     width: 40%;
 }
+
 .datainput {
     width: 50%;
 }
+
 textarea {
     width: 15vw;
     height: 19vh;
 }
+
 .box2 {
     width: 60%;
 }
+
 .display_box {
     background-color: rgba(127, 255, 212, 0.773);
     border: 1px;
@@ -99,6 +118,16 @@ textarea {
     background-color: aquamarine;
 }
 
+#paper {
+    background-color:rgb(255, 223, 229);
+    border-radius: 10px;
+}
+
+#doiinput {
+    background-color:rgb(255, 223, 229);
+    border-radius: 10px;
+}
+
 #ref {
     border-radius: 10px;
     margin-left: 2vw;
@@ -108,3 +137,4 @@ textarea {
     padding-right: 2vw;
     background-color: rgb(252, 178, 255);
 }
+
