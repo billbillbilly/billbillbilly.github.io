@@ -216,9 +216,9 @@ window.onload = async() => {
     if (JSON.stringify(document.cookie) === "isDark=true") {
         console.log(document.cookie);
         isDark = false;
-        switchMode();
+        await switchMode();
     } else if (JSON.stringify(document.cookie) === "isDark=false") {
         isDark = true;
-        switchMode();
+        await switchMode();
     }
 }
