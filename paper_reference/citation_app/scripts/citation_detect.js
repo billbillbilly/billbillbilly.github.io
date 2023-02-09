@@ -160,7 +160,6 @@ const renderCitation = () => {
 let isDark = false;
 // const normalColor = document.querySelector("body").style.backgroundColor;
 const switchMode = async() => {
-    console.log(document.querySelector("body > h1 > label > span").classList);
     if (!isDark) {
         document.querySelector("body > h1").style.color = "rgb(176, 176, 176)";
         document.querySelector("body > h2").style.color = "rgb(176, 176, 176)";
@@ -201,9 +200,53 @@ const switchMode = async() => {
         document.querySelector("#ref").style.color = "white";
     }
     isDark = !isDark;
+    setCookie("isDark", JSON.stringify(isDark));
+    checkCookie();
+}
+
+const setCookie = (cname, cvalue) => {
+    const d = new Date();
+    d.setTime(d.getTime() + (1*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+const getCookie = (cname) => {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
+const checkCookie = () => {
+    let toogle = getCookie("isDark");
+    if (toogle != "") {
+      alert(toogle);
+    } else {
+        toogle = prompt("Please enter your name:","");
+       if (toogle != "" && toogle != null) {
+         setCookie("isDark", toogle);
+       }
+    }
+  }
+
+if (getCookie("isDark") === "true") {
+    isDark = true;
+    switchMode();
+} else {
+    isDark = false;
+    switchMode();
 }
 
 window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
 }
-
