@@ -201,7 +201,6 @@ const switchMode = async() => {
     }
     isDark = !isDark;
     setCookie("isDark", JSON.stringify(isDark));
-    checkCookie();
 }
 
 const setCookie = (cname, cvalue) => {
@@ -226,18 +225,6 @@ const getCookie = (cname) => {
     }
     return "";
 }
-
-const checkCookie = () => {
-    let toogle = getCookie("isDark");
-    if (toogle != "") {
-      alert(toogle);
-    } else {
-        toogle = prompt("Please enter your name:","");
-       if (toogle != "" && toogle != null) {
-         setCookie("isDark", toogle);
-       }
-    }
-  }
 
 if (getCookie("isDark") === "true") {
     isDark = true;
