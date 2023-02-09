@@ -217,8 +217,10 @@ window.onload = async() => {
         console.log(document.cookie);
         isDark = false;
         await switchMode();
+        document.querySelector("body > h1 > label > input[type=checkbox]").checked = false;
     } else if (document.cookie === "isDark=false") {
         isDark = true;
         await switchMode();
+        document.querySelector("body > h1 > label > input[type=checkbox]").checked = true;
     }
 }
