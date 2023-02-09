@@ -213,7 +213,7 @@ window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
     if (document.cookie === "isDark=true") {
         isDark = false;
-        await document.querySelector("body > h1 > label > input[type=checkbox]").checked = false;
+        document.querySelector("body > h1 > label > input[type=checkbox]").checked = false;
         await switchMode();
     } else if (document.cookie === "isDark=false") {
         isDark = true;
