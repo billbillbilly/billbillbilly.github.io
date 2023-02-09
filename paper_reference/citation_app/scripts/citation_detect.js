@@ -210,7 +210,7 @@ const setCookie = (cname, cvalue) => {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-if (document.cookie === "isDark=true") {
+if (JSON.stringify(document.cookie) === "isDark=true") {
     isDark = true;
     switchMode();
 } else {
