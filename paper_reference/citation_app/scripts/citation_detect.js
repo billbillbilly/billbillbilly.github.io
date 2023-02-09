@@ -225,8 +225,9 @@ const getCookie = (cname) => {
     }
     return "";
 }
-
+console.log(getCookie("isDark"));
 if (getCookie("isDark") === "true") {
+    console.log(getCookie("isDark"));
     isDark = true;
     switchMode();
 } else {
