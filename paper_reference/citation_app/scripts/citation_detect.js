@@ -158,7 +158,6 @@ const renderCitation = () => {
 }
 
 let isDark = false;
-// const normalColor = document.querySelector("body").style.backgroundColor;
 const switchMode = async() => {
     if (!isDark) {
         document.querySelector("body > h1").style.color = "rgb(176, 176, 176)";
