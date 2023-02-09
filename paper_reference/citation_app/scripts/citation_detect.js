@@ -213,7 +213,7 @@ const setCookie = (cname, cvalue) => {
 if (JSON.stringify(document.cookie) === "isDark=true") {
     isDark = false;
     switchMode();
-} else {
+} else if (JSON.stringify(document.cookie) === "isDark=false") {
     isDark = true;
     switchMode();
 }
