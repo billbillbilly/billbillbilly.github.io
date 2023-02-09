@@ -207,7 +207,7 @@ const setCookie = (cname, cvalue) => {
     const d = new Date();
     d.setTime(d.getTime() + (1*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires;
 }
 
 if (JSON.stringify(document.cookie) === "isDark=true") {
