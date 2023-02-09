@@ -213,11 +213,11 @@ const setCookie = (cname, cvalue) => {
 window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
     console.log(document.cookie);
-    if (JSON.stringify(document.cookie) === "isDark=true") {
+    if (document.cookie === "isDark=true") {
         console.log(document.cookie);
         isDark = false;
         await switchMode();
-    } else if (JSON.stringify(document.cookie) === "isDark=false") {
+    } else if (document.cookie === "isDark=false") {
         isDark = true;
         await switchMode();
     }
