@@ -210,14 +210,14 @@ const setCookie = (cname, cvalue) => {
     document.cookie = cname + "=" + cvalue + ";" + expires;
 }
 
-if (JSON.stringify(document.cookie) === "isDark=true") {
-    isDark = false;
-    switchMode();
-} else if (JSON.stringify(document.cookie) === "isDark=false") {
-    isDark = true;
-    switchMode();
-}
-
 window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
+    console.log(document.cookie);
+    if (JSON.stringify(document.cookie) === "isDark=true") {
+        isDark = false;
+        switchMode();
+    } else if (JSON.stringify(document.cookie) === "isDark=false") {
+        isDark = true;
+        switchMode();
+    }
 }
