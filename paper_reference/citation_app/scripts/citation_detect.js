@@ -160,11 +160,12 @@ const renderCitation = () => {
 let isDark = false;
 // const normalColor = document.querySelector("body").style.backgroundColor;
 const switchMode = async() => {
+    console.log(document.querySelector("body > h1 > label > span").classList);
     if (!isDark) {
         document.querySelector("body > h1").style.color = "rgb(176, 176, 176)";
         document.querySelector("body > h2").style.color = "rgb(176, 176, 176)";
-        document.querySelector("#paper").style.backgroundColor = "white";
-        document.querySelector("#doiinput").style.backgroundColor = "white";
+        document.querySelector("#paper").style.backgroundColor = "#ccc";
+        document.querySelector("#doiinput").style.backgroundColor = "#ccc";
         document.querySelector("body > div:nth-child(2) > div").style.backgroundColor = "rgb(120, 120, 120)";
         document.querySelector("body").style.backgroundColor = "rgb(83, 83, 83)";
         document.querySelector("body > div:nth-child(2) > div > div.box2 > div").style.backgroundColor = "rgb(176, 176, 176)";
@@ -176,7 +177,6 @@ const switchMode = async() => {
         allLabels.forEach(label => {
             label.style.color = "white";
         });
-
         document.querySelector("body > h1 > div > div").textContent = "Night";
         document.querySelector("#ref").style.backgroundColor = "rgb(120, 120, 120)";
         document.querySelector("#ref").style.color = "black";
@@ -196,7 +196,7 @@ const switchMode = async() => {
         allLabels.forEach(label => {
             label.style.color = "black";
         });
-        document.querySelector("body > h1 > div > div").textContent = "Day";
+        document.querySelector("body > h1 > div > div").textContent = "Light";
         document.querySelector("#ref").style.backgroundColor = "rgb(252, 178, 255)";
         document.querySelector("#ref").style.color = "white";
     }

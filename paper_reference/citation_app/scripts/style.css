@@ -13,7 +13,7 @@ h1 {
 
 h2 {
     color: rgb(252, 178, 255);
-    font-size: 1.5vw;
+    font-size: max(25px, 1.5vw);
     font-family: monospace;
     padding-left: 2vw;
 }
@@ -62,9 +62,10 @@ b {
     background-color: rgb(252, 178, 255);
     display: flex;
     flex-direction: row;
-    height : 32vh;
-    max-height: 300px;
-    min-height: 299px;
+    height : 32vw;
+    max-height: 295px;
+    min-height: 233px;
+    min-width: 490px;
     gap: 3vw;
     font-size: 1vw;
     margin-left: 2vw;
@@ -72,9 +73,9 @@ b {
     border-color: rgb(183, 183, 183);
     border-width: 5px;
     border-radius: 10px;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-left: 2vw;
-    padding-right: 1vw;
+    padding-right: 2vw;
 }
 
 label {
@@ -87,20 +88,24 @@ label {
 .box1 {
     display: flex;
     width: 40%;
+    min-width: 190px;
 }
 
 .datainput {
     width: 50%;
+    min-width: 95px;
 }
 
 textarea {
     width: 15vw;
     height: 19vh;
     min-height: 180px;
+    min-width: 82px;
 }
 
 .box2 {
     width: 60%;
+    min-width: 284px;
 }
 
 .display_box {
@@ -109,6 +114,7 @@ textarea {
     border-radius: 10px;
     height: 15.5vh;
     min-height: 145px;
+    min-width: 260px;
     overflow: scroll;
     overflow-x: hidden;
     font-size: 0.85vw;
@@ -133,6 +139,10 @@ textarea {
     border-radius: 10px;
 }
 
+#doi {
+    min-width: 55px;
+}
+
 #ref {
     border-radius: 10px;
     margin-left: 2vw;
@@ -144,6 +154,9 @@ textarea {
 }
 
 /* switch button */
+#toggle {
+    min-width: 45px;
+}
 .switch {
     position:relative;
     display: inline-block;
@@ -179,7 +192,7 @@ textarea {
     width: 14px;
     left: 2px;
     bottom: 1.45px;
-    background-color: rgb(8, 0, 255);
+    background-color: rgb(83, 83, 83);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -196,6 +209,7 @@ input:checked + .slider:before {
     -webkit-transform: translateX(26.5px);
     -ms-transform: translateX(26.5px);
     transform: translateX(26.5px);
+    background-color: rgb(8, 0, 255);
 }
 
 .slider.round {
