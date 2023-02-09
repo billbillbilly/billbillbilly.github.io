@@ -200,6 +200,7 @@ const switchMode = async() => {
     }
     isDark = !isDark;
     setCookie("isDark", JSON.stringify(isDark));
+    console.log(document.cookie);
 }
 
 const setCookie = (cname, cvalue) => {
