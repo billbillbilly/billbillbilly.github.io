@@ -200,7 +200,6 @@ const switchMode = async() => {
     }
     isDark = !isDark;
     setCookie("isDark", JSON.stringify(isDark));
-    console.log(document.cookie);
 }
 
 const setCookie = (cname, cvalue) => {
@@ -212,12 +211,10 @@ const setCookie = (cname, cvalue) => {
 
 window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
-    console.log(document.cookie);
     if (document.cookie === "isDark=true") {
-        console.log(document.cookie);
         isDark = false;
+        await document.querySelector("body > h1 > label > input[type=checkbox]").checked = false;
         await switchMode();
-        document.querySelector("body > h1 > label > input[type=checkbox]").checked = false;
     } else if (document.cookie === "isDark=false") {
         isDark = true;
         await switchMode();
