@@ -214,6 +214,7 @@ window.onload = async() => {
     await document.querySelector("body > h1 > label > span").addEventListener('click', switchMode);
     console.log(document.cookie);
     if (JSON.stringify(document.cookie) === "isDark=true") {
+        console.log(document.cookie);
         isDark = false;
         switchMode();
     } else if (JSON.stringify(document.cookie) === "isDark=false") {
