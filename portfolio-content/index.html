@@ -20,7 +20,7 @@
 	</head>
 
 	<body>
-		<a class = "skip" href="#main" style="color:white; font-size: min(2vw, 15px)">Skip to Main Content</a>
+		<a class="skip" href="#main" style="color:white; font-size: min(2vw, 15px)">Skip to Main Content</a>
 		<a name="top"></a>
 		<header id="main">
 			<nav>
@@ -39,30 +39,25 @@
 
 		<main>
 			<h1 class="center">ReactiveCanvas</h1>
-			<div class="center" id="p_1">
+			<figure style="grid-column: 1 / -1;">
+				<img class="center" style="max-width:75vw; padding-top:0%;" 
+				src="images/ffffff_d400ff_04ff00.gif" 
+				width="500px" alt = "gallery image" style="padding-top:0%;">
+			</figure>
+			<div class="center" id="p_1" style="position: absolute; top: 20vw; left: 15vw;">
 				<p>
 					ReactiveCanvas is a creative art project lauched from December 2020.
-					It is an interactive system that allows everyone to generate own artwork
-					with customizable inputs and rulesets. People can enjoy interacting with
-					their generated arts and download. ReactiveCanvas is a creative art project lauched from December 2020.
-					It is an interactive system that allows everyone to generate own artwork
-					with customizable inputs and rulesets. People can enjoy interacting with
-					their generated arts and download. ReactiveCanvas is a creative art project lauched from December 2020.
 					It is an interactive system that allows everyone to generate own artwork
 					with customizable inputs and rulesets. People can enjoy interacting with
 					their generated arts and download.
 				</p>
 			</div>
-			<figure id="parent">
-				<img class="center" src="images/homepage1.gif" alt = "main image"/>
-				<img class="center" id="static" src="images/homepage1.png" alt = "main static image"/>
-				<figcaption class="center">Dynamic color sqaure in the 3D perspective</figcaption>
-			</figure>
-			<div class="center" id="p_2">
+			<div class="center" id="p_2" style="position: absolute; top: 35vw; right: 15vw;">
 				<aside aria-label = "instruction">
 					<p>Three.js is a cross-browser JavaScript library and application programming
 						interface used to create and display animated 3D computer graphics in a web
-						browser using WebGL. </p>
+						browser using WebGL. 
+					</p>
 				</aside>
 				<p>
 					ReactiveCanvas is computed with the celular autometa algorithm based on
@@ -72,10 +67,10 @@
 					with it from different perspectives.
 				</p>
 			</div>
-			<figure>
-				<img class="center" src="images/homepage2.png" alt = "second image"/>
-				<figcaption class="center">Static random color squares</figcaption>
-			</figure>
+			<!-- <figure>
+				<img class="center" style="max-width:40vw" src="images/homepage2.png" alt = "second image"/>
+				<figcaption class="center" style="max-width:40vw">Static random color squares</figcaption>
+			</figure> -->
 
 			<form id="contact_form" class="center" action="https://formspree.io/f/mrgdngby" method="POST" enctype="multipart/form-data">
 			  <div class="row">
@@ -93,7 +88,6 @@
 			    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
 			    <span id="message_validation" class="error_message"></span>
 			  </div>
-
 		    <input id="submit_button" type="submit" value="Send email" />
 			</form>
 		</main>
