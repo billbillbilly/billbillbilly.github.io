@@ -41,30 +41,17 @@
 	</aside>
 
 	<main>
-		<h1 class="center" style="margin-left:0%">Gallery</h1>
-		<div class="center" id="p_1" style="margin-bottom: 5vw;">
-			<span class="textpatch highlight">
-				The gallery displayed the interesting results of ReactiveCanvas. For the same pattern,
-				there is set of parameters can be adjusted to change the results. Based on the control of
-				density, height, and pattern, ReactiveCanvas shows the diversity of generative
-				art. 
-			</span>
-			<br>
-			<video class="center" style=" margin-top: 2vw; grid-column: 1;" controls="controls" name="matrix">
+		<!-- <h1 class="center" style="margin-left:0%">Gallery</h1> -->
+		<div class="gallery" id="p_1" style="margin-bottom: 5vw; margin-top: 3vw; grid-column: 1/-1;">
+			<!-- <figure id="parent" style="margin-top: 3vw;">
+				<img style="max-width:45vw" src="images/homepage1.gif" alt = "main image"/>
+				<img style="max-width:45vw" id="static" src="images/homepage1.png" alt = "main static image"/>
+			</figure> -->
+			<video class="center" style="grid-column: 1; max-width: 100vw;" name="matrix" autoplay loop muted>
 				<source src="videos/patterns.mov">
 			</video>
 		</div>
-
-		<figure id="parent">
-			<img class="center" style="max-width:45vw" src="images/homepage1.gif" alt = "main image"/>
-			<img class="center" style="max-width:45vw" id="static" src="images/homepage1.png" alt = "main static image"/>
-			<!-- <figcaption class="center" style="max-width:40vw">Dynamic color sqaure in the 3D perspective</figcaption> -->
-		</figure>
-
-		<div class="gallery" style="max-width:40vw; grid-column: 1; margin-top: 2vw;">
-			<!-- <p class="center">
-				Static Examples show the control of density, height, and pattern.
-			</p> -->
+		<div class="gallery" style="grid-column: 1/-1;">
 			<figure class="galleryfigure">
 				<img src="images/sample1_2.png" width="150" alt = "gallery image"/>
 				<img src="images/sample1_3.png" width="150" alt = "gallery image"/>
