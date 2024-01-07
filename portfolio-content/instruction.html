@@ -20,7 +20,10 @@
 </head>
 
 <body>
-	<a class = "skip" href="#main" style="color:white; font-size: min(2vw, 15px)">Skip to Main Content</a>
+	<a class="skip" href="#main" style="color:white; 
+		font-size: min(2vw, 15px); 
+		position:fixed;">Skip to Main Content
+	</a>
 	<header id="main">
 		<nav>
 			<ul>
@@ -31,11 +34,10 @@
 			</ul>
 		</nav>
 	</header>
-
 	<main>
 		<h1 class="center" style="margin-left:0%">Instruction</h1>
-		<div class="center">
-			<p>
+		<div class="center" style="margin-bottom: 5vw;">
+			<span class="textpatch highlight">
 				The dynamic parameters allows you to change the speed of the animation -
 				frames per second and the depth of the matrix - maximun height of each square.
 				In the painting section, you can customize background color and change
@@ -44,20 +46,25 @@
 				patterns based on a set of colors. The algorithm can mix selected colors
 				in any patterns. Once the painting is generated, you can save the image or
 				reset the matrix.
-			</p>
+			</span>
 			<br>
 		</div>
-		<video class="center" controls="controls" name="matrix">
-  		<source src="videos/matrix.mov">
-		</video>
-		<video class="center" controls="controls" name="matrix">
-  		<source src="videos/patterns.mov">
-		</video>
-
+		<div style="grid-column: 1; grid-column: 1 / -1; display: grid;">
+			<video class="center" style="margin-left: 8vw; margin-right: 0; grid-column: 1;" controls="controls" name="matrix">
+				<source src="videos/matrix.mov">
+			</video>
+			<br>
+			<video class="center" style="margin-left: 8vw; margin-right: 0; grid-column: 1;" controls="controls" name="matrix">
+				<source src="videos/tutorial.mp4">
+			</video>
+			<br>
+			<video class="center" style="margin-left: 8vw; margin-right: 0; grid-column: 1;" controls="controls" name="matrix">
+				<source src="videos/spatial.mov">
+			</video>
+		</div>
 	</main>
-
 	<footer>
-		ReactiveCanvas
+		<p>ReactiveCanvas By Xiaohao Yang</p>	
 	</footer>
 </body>
 </html>

@@ -20,7 +20,10 @@
 </head>
 
 <body>
-	<a class = "skip" href="#main" style="color:white; font-size: min(2vw, 15px)">Skip to Main Content</a>
+	<a class="skip" href="#main" style="color:white; 
+		font-size: min(2vw, 15px); 
+		position:fixed;">Skip to Main Content
+		</a>
 	<a name="top"></a>
 	<header id="main">
 		<nav>
@@ -39,83 +42,57 @@
 
 	<main>
 		<h1 class="center" style="margin-left:0%">Gallery</h1>
-		<div class="center" id="p_1">
-			<p>
+		<div class="center" id="p_1" style="margin-bottom: 5vw;">
+			<span class="textpatch highlight">
 				The gallery displayed the interesting results of ReactiveCanvas. For the same pattern,
 				there is set of parameters can be adjusted to change the results. Based on the control of
 				density, height, and pattern, ReactiveCanvas shows the diversity of generative
-				art. As a new kind of art form, ReactiveCanvas tries to involve computation
-				and hands-on experience in the generating process of artworks.
-			</p>
+				art. 
+			</span>
 			<br>
+			<video class="center" style=" margin-top: 2vw; grid-column: 1;" controls="controls" name="matrix">
+				<source src="videos/patterns.mov">
+			</video>
 		</div>
 
-		<div class="gallery center" style="max-width:40vw">
+		<figure id="parent">
+			<img class="center" style="max-width:45vw" src="images/homepage1.gif" alt = "main image"/>
+			<img class="center" style="max-width:45vw" id="static" src="images/homepage1.png" alt = "main static image"/>
+			<!-- <figcaption class="center" style="max-width:40vw">Dynamic color sqaure in the 3D perspective</figcaption> -->
+		</figure>
+
+		<div class="gallery" style="max-width:40vw; grid-column: 1; margin-top: 2vw;">
 			<!-- <p class="center">
 				Static Examples show the control of density, height, and pattern.
 			</p> -->
-			<figure>
+			<figure class="galleryfigure">
 				<img src="images/sample1_2.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample1_3.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample1_4.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample1_5.png" width="150" alt = "gallery image"/>
 				<!-- <figcaption>density, height, and pattern</figcaption> -->
 			</figure>
-			<figure>
+			<figure class="galleryfigure">
 				<img src="images/ffffff_d400ff_04ff00-2.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/ffffff_d400ff_04ff00-3.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_1.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_2.png" width="150" alt = "gallery image"/>
 				<!-- <figcaption>density, height, and pattern</figcaption> -->
 			</figure>
-			<figure>
+			<figure class="galleryfigure">
 				<img src="images/sample2_3.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_4.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_5.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_6.png" width="150" alt = "gallery image"/>
 				<!-- <figcaption>density, height, and pattern</figcaption> -->
 			</figure>
-			<figure>
+			<figure class="galleryfigure">
 				<img src="images/sample2_7.png" width="150" alt = "gallery image"/>
-				<!-- <figcaption>density, height, and pattern</figcaption> -->
-			</figure>
-			<figure>
 				<img src="images/sample2_8.png" width="150" alt = "gallery image"/>
 				<!-- <figcaption>density, height, and pattern</figcaption> -->
 			</figure>
 		</div>
-		<figure id="parent">
-			<img class="center" style="max-width:40vw" src="images/homepage1.gif" alt = "main image"/>
-			<img class="center" style="max-width:40vw" id="static" src="images/homepage1.png" alt = "main static image"/>
-			<figcaption class="center" style="max-width:40vw">Dynamic color sqaure in the 3D perspective</figcaption>
-		</figure>
+		
 		<!-- <figure>
 			<img class="center" style="max-width:40vw" src="images/homepage2.png" alt = "second image"/>
 			<figcaption class="center" style="max-width:40vw">Static random color squares</figcaption>
@@ -129,7 +106,7 @@
 	</main>
 
 	<footer>
-		ReactiveCanvas
+		<p>ReactiveCanvas By Xiaohao Yang</p>	
 	</footer>
 </body>
 </html>
